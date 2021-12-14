@@ -8,41 +8,44 @@ int main(int argc, char const *argv[])
     char text[TXT];
 
     char choice = '\\';
-    char e;
 
     int i = 0;
 
+    printf("enter word %d :", i);
+    scanf("%c", &choice);
     while (choice != ' ')
     {
+        word[i++] = choice;
         printf("enter word %d :", i);
-        scanf("%c%c", &choice ,&e);
-
-        if (choice != ' ')
-           { word[i++] = choice;
-           }
+        scanf("%c%c", &choice, &choice);
     }
+    word[i] = '\0';
+
     printf("\n");
 
     i = 0;
+    printf("enter txt %d :", i);
+    scanf("%c%c", &choice, &choice);
     while (choice != '`')
     {
-        printf("enter text %d :", i);
-        scanf("%c%c", &choice ,&e);
-
-        if (choice != '`')
-            text[i++] = choice;
+        text[i++] = choice;
+        printf("enter txt %d :", i);
+        scanf("%c%c", &choice, &choice);
     }
-    
-    
+    text[i] = '\0';
+
+    printf("\n");
+    printf("Gematria Sequences: ");
+    gematriaSequences(text, strlen(text), word);
+
+    printf("\n");
+    printf("Atbash Sequences : ");
+    atbashSequences(text, strlen(text), word);
+
     printf("\n");
     printf("Anagram Sequences: ");
     anagramSequences(text, strlen(text), word);
 
-    printf("\n");
-    printf("Atbash Sequences : ");
-
-    printf("\n");
-    printf("Gematria Sequences: ");
     printf("\n");
 
     return 0;
