@@ -129,7 +129,7 @@ int areEquals(char *str1, char *str2)
     return 1;
 }
 
-void strToItbash(char *str)
+void strToAtbash(char *str)
 {
     while (*str)
     {
@@ -143,8 +143,8 @@ void atbashSequences(char *str, int len, char *word)
     char *copiedWord = strCopy(word);
     char *copiedreverse = strCopy(word);
 
-    strToItbash(copiedWord);
-    strToItbash(copiedreverse);
+    strToAtbash(copiedWord);
+    strToAtbash(copiedreverse);
     reverseWord(copiedreverse, strlen(copiedreverse));
 
     int flag = 1;

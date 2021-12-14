@@ -7,13 +7,13 @@ int main(int argc, char const *argv[])
     char word[WORD];
     char text[TXT];
 
-    char choice = '\\';
+    char choice;
 
     int i = 0;
 
     printf("enter word %d :", i);
     scanf("%c", &choice);
-    while (choice != ' ')
+    while (choice != ' ' && choice != '\t' && choice != '\n')
     {
         word[i++] = choice;
         printf("enter word %d :", i);
@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
 
     i = 0;
     printf("enter txt %d :", i);
-    scanf("%c%c", &choice, &choice);
+    scanf(" %c", &choice);
     while (choice != '`')
     {
         text[i++] = choice;
@@ -34,7 +34,6 @@ int main(int argc, char const *argv[])
     }
     text[i] = '\0';
 
-    printf("\n");
     printf("Gematria Sequences: ");
     gematriaSequences(text, strlen(text), word);
 
@@ -45,7 +44,6 @@ int main(int argc, char const *argv[])
     printf("\n");
     printf("Anagram Sequences: ");
     anagramSequences(text, strlen(text), word);
-
     printf("\n");
 
     return 0;
