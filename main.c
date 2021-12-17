@@ -90,16 +90,16 @@ int main(int argc, char const *argv[])
     int i = 0;
 
     // printf("enter word %d :", i);
-    // scanf("%c", &choice);
-    // while (choice != ' ' && choice != '\t' && choice != '\n' && i < WORD)
-    // {
-    //     word[i++] = choice;
-    //     // printf("enter word %d :", i);
-    //     scanf("%c%c", &choice, &choice);
-    // }
-    // word[i] = '\0';
-    readWord(word);
-    // printf("\n");
+    scanf("%c", &choice);
+    while (choice != ' ' && choice != '\t' && choice != '\n' && i < WORD)
+    {
+        word[i++] = choice;
+        // printf("enter word %d :", i);
+        scanf("%c", &choice);
+    }
+    word[i] = '\0';
+    // readWord(word);
+    //  printf("\n");
 
     i = 0;
     printf("enter txt %d :", i);
@@ -108,11 +108,11 @@ int main(int argc, char const *argv[])
     {
         text[i++] = choice;
         // printf("enter txt %d :", i);
-        scanf("%c",  &choice);
+        scanf("%c", &choice);
     }
     text[i] = '\0';
 
-    //readTxT(text);
+    // readTxT(text);
 
     printf("Gematria Sequences: ");
     gematriaSequences(text, strlen(text), word);
