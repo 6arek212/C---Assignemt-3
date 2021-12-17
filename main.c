@@ -113,7 +113,7 @@ int main(int argc, char const *argv[])
     text[i] = '\0';
 
     // readTxT(text);
-
+    printf("\n");
     printf("Gematria Sequences: ");
     gematriaSequences(text, strlen(text), word);
 
