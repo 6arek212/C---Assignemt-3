@@ -89,25 +89,20 @@ int main(int argc, char const *argv[])
 
     int i = 0;
 
-    // printf("enter word %d :", i);
     scanf("%c", &choice);
     while (choice != ' ' && choice != '\t' && choice != '\n' && i < WORD)
     {
         word[i++] = choice;
-        // printf("enter word %d :", i);
         scanf("%c", &choice);
     }
     word[i] = '\0';
     // readWord(word);
-    //  printf("\n");
 
     i = 0;
-    printf("enter txt %d :", i);
     scanf(" %c", &choice);
     while (choice != '`' && i < TXT)
     {
         text[i++] = choice;
-        // printf("enter txt %d :", i);
         scanf("%c", &choice);
     }
     text[i] = '\0';
