@@ -108,7 +108,7 @@ int main(int argc, char const *argv[])
     {
         text[i++] = choice;
         // printf("enter txt %d :", i);
-        scanf("%c%c", &choice, &choice);
+        scanf("%c",  &choice);
     }
     text[i] = '\0';
 
