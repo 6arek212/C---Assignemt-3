@@ -45,7 +45,7 @@ int main(int argc, char const *argv[])
     printf("\n");
     printf("Anagram Sequences: ");
     anagramSequences(text, strlen(text), word);
-    printf("\n");
+    
 
     return 0;
 }
