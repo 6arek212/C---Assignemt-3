@@ -5,12 +5,12 @@ AR = ar
 .PHONY : all clean
 
 
-all : prog
+all : stringProg
 
 
 
-prog : lib_str_mainpulation.a main.o
-	${CC}  ${Wall} -o prog str_mainpulation.o  main.o
+stringProg : lib_str_mainpulation.a main.o
+	${CC}  ${Wall} -o stringProg str_mainpulation.o  main.o
 
 
 
@@ -28,4 +28,4 @@ main.o : main.c str_mainpulation.h
 
 
 clean : 
-	rm -rf *.o prog  *.a
+	rm -rf *.o stringProg  *.a

@@ -11,25 +11,25 @@ int main(int argc, char const *argv[])
 
     int i = 0;
 
-    printf("enter word %d :", i);
-    scanf("%c", &choice);
-    while (choice != ' ' && choice != '\t' && choice != '\n')
+    //printf("enter word %d :", i);
+    scanf("%c", &choice );
+    while (choice != ' ' && choice != '\t' && choice != '\n' && i < WORD)
     {
         word[i++] = choice;
-        printf("enter word %d :", i);
+        //printf("enter word %d :", i);
         scanf("%c%c", &choice, &choice);
     }
     word[i] = '\0';
 
-    printf("\n");
+    //printf("\n");
 
     i = 0;
-    printf("enter txt %d :", i);
+    //printf("enter txt %d :", i);
     scanf(" %c", &choice);
-    while (choice != '`')
+    while (choice != '`' && i < TXT)
     {
         text[i++] = choice;
-        printf("enter txt %d :", i);
+        //printf("enter txt %d :", i);
         scanf("%c%c", &choice, &choice);
     }
     text[i] = '\0';
