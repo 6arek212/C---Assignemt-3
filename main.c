@@ -79,7 +79,7 @@ void readWord(char word[])
     word[i] = '\0';
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     // +1 for '\0'
     char word[WORD + 1];
