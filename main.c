@@ -4,32 +4,33 @@
 
 int main(int argc, char const *argv[])
 {
-    char word[WORD];
-    char text[TXT];
+    // +1 for '\0'
+    char word[WORD + 1];
+    char text[TXT + 1];
 
     char choice;
 
     int i = 0;
 
-    //printf("enter word %d :", i);
-    scanf("%c", &choice );
+    // printf("enter word %d :", i);
+    scanf("%c", &choice);
     while (choice != ' ' && choice != '\t' && choice != '\n' && i < WORD)
     {
         word[i++] = choice;
-        //printf("enter word %d :", i);
+        // printf("enter word %d :", i);
         scanf("%c%c", &choice, &choice);
     }
     word[i] = '\0';
 
-    //printf("\n");
+    // printf("\n");
 
     i = 0;
-    //printf("enter txt %d :", i);
+    // printf("enter txt %d :", i);
     scanf(" %c", &choice);
     while (choice != '`' && i < TXT)
     {
         text[i++] = choice;
-        //printf("enter txt %d :", i);
+        // printf("enter txt %d :", i);
         scanf("%c%c", &choice, &choice);
     }
     text[i] = '\0';
