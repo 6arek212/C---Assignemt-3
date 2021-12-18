@@ -107,7 +107,6 @@ int main()
     }
     text[i] = '\0';
 
-    printf("\n");
     printf("Gematria Sequences: ");
     gematriaSequences(text, strlen(text), word);
 
