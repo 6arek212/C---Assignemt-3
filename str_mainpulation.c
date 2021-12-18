@@ -38,7 +38,7 @@ int gimetriaSum(char *str)
 
 char *strCopy(char *str)
 {
-    char *newStr = (char *)malloc(sizeof(char) * strlen(str));
+    char *newStr = (char *)malloc(sizeof(char) * (strlen(str) + 1));
     return strcpy(newStr, str);
 }
 
