@@ -111,7 +111,7 @@ int main()
     gematriaSequences(text, strlen(text), word);
 
     printf("\n");
-    printf("Atbash Sequences : ");
+    printf("Atbash Sequences: ");
     atbashSequences(text, strlen(text), word);
 
     printf("\n");
