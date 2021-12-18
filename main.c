@@ -93,7 +93,7 @@ int main()
     while (choice != ' ' && choice != '\t' && choice != '\n' && i < WORD)
     {
         word[i++] = choice;
-        scanf("%c" & choice);
+        scanf("%c", &choice);
     }
     word[i] = '\0';
     // readWord(word);
@@ -103,7 +103,7 @@ int main()
     while (choice != '`' && i < TXT)
     {
         text[i++] = choice;
-        scanf("%c",&choice);
+        scanf("%c", &choice);
     }
     text[i] = '\0';
 
